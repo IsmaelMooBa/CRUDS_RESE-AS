@@ -8,6 +8,65 @@
 </head>
 <body>
     <h1>Hola cara de bola</h1>
+
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body">
+                <form action="" method="post">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label>Nombre de producto</label>
+                            <input type="text" class="form-control mb-3" name="nombre">
+                        </div>
+                        <div class="col">
+                            <label>Precio del producto</label>
+                            <input type="text" class="form-control mb-3" name="precio">
+                        </div>
+                        <div class="col">
+                            <label>Descripcion de producto</label>
+                            <input type="text" class="form-control mb-3" name="resenia">
+                        </div>
+                        <div class="col">
+                            <label>Calificacion del producto</label>
+                            <input type="text" class="form-control mb-3" name="calificacion">
+                        </div>
+                        <div class="col">
+                            <label>Imagen del producto</label>
+                            <input type="file" class="form-control mb-3" name="imagen">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary mb-3 mt-4" type="submit">Subir</button>
+                        </div>
+                    </div>
+                </form>
+                <table class="table table-bordered">
+                    <thead>
+                       <!-- <th scope="col">#</th> -->
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Calificacion</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Borrar</th>
+                    </thead>
+                </table>
+                <tbody>
+                    {% for d in data %}
+                    <tr>
+                        <td>{{d.nombre}}</td>
+                        <td>{{d.precio}}</td>
+                        <td>{{d.resenia}}<</td>
+                        <td>{{d.calificacion}}<</td>
+                        <td>{{d.imagen}}<</td>
+                        <td><button class="btn btn-primary btn-sm" id="">Editar</button></td>
+                        <td><a href="#" class="btn btn-primary btn-sm">Borrar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
